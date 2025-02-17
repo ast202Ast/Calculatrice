@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CALCULATRICE</title>
+  <link rel="stylesheet" href="fichier.css">
+<script>
+    function appendvaleurTap(valeur) {
+            document.getElementById('afficher').valeur += valeur;
+        }
+        function calculer() {
+            const resultat = document.getElementById('result');
+            try {
+                resultat.valeur = eval(resultat.valeur);
+            } catch (e) {
+                resultat.valeur = 'Erreur';
+            }
+        }
+</script>
+</head>
+
+<body>
+    <input type="text" id="afficher" value="Valeur"><br>
+    <input type="button" value="1" class="bouton" onclick="appendvaleurTap('1')">
+    <input type="button" value="2" class="bouton" onclick="appendvaleurTap('2')">
+    <input type="button" value="3" class="bouton" onclick="appendvaleurTap('3')">
+    <input type="button" value="4" class="bouton" onclick="appendvaleurTap('4')"><br>
+    <input type="button" value="5" class="bouton" onclick="appendvaleurTap('5')">
+    <input type="button" value="6" class="bouton" onclick="appendvaleurTap('6')">
+    <input type="button" value="7" class="bouton" onclick="appendvaleurTap('7')">
+    <input type="button" value="8" class="bouton" onclick="appendvaleurTap('8')"><br>
+    <input type="button" value="9" class="bouton" onclick="appendvaleurTap('9')">
+    <input type="button" value="0" class="bouton" onclick="appendvaleurTap('0')"><br>
+    <input type="button" value="+" class="bouton" onclick="">
+    <input type="button" value="-" class="bouton" onclick="">
+    <input type="button" value="*" class="bouton" onclick="">
+    <input type="button" value="/" class="bouton" onclick="">
+    <input type="button" value="%" class="bouton" onclick="">
+    <input type="button" value="=" class="bouton" onclick="calculer()">
+</body>
+</html>
