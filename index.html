@@ -6,20 +6,24 @@
 <script>
     function appendvaleurTap(valeur) {
             document.getElementById('afficher').valeur += valeur;
+    }
+
+    function calculer() {
+        const resultat = document.getElementById('result');
+        try {
+            resultat.valeur = eval(resultat.valeur);
+        } cat
         }
-        function calculer() {
-            const resultat = document.getElementById('result');
-            try {
-                resultat.valeur = eval(resultat.valeur);
-            } catch (e) {
-                resultat.valeur = 'Erreur';
-            }
-        }
+    }
+
+    function effacer() {
+            document.getElementById('afficher').value = '';
+    }
 </script>
 </head>
 
 <body>
-    <input type="text" id="afficher" value="Valeur"><br>
+    <input type="text" id="afficher" value="ici"><br>
     <input type="button" value="1" class="bouton" onclick="appendvaleurTap('1')">
     <input type="button" value="2" class="bouton" onclick="appendvaleurTap('2')">
     <input type="button" value="3" class="bouton" onclick="appendvaleurTap('3')">
@@ -36,5 +40,6 @@
     <input type="button" value="/" class="bouton" onclick="">
     <input type="button" value="%" class="bouton" onclick="">
     <input type="button" value="=" class="bouton" onclick="calculer()">
+    <input type="button" value="C" class="bouton" onclick="effacer()">
 </body>
 </html>
